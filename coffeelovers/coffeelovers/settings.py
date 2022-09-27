@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +20,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0r^d7dbb_uvlx$xnccbzx&4t1ey_@39oob2^s9r3=to@4997i5'
+
+SECRET_KEY = config('SITE_SECRET_KEY')
+
+EMAIL_HOST = config('SITE_MAIL_HOST')
+EMAIL_PORT = config('SITE_MAIL_PORT')
+EMAIL_HOST_USER = config('SITE_MAIL')
+EMAIL_HOST_PASSWORD = config('SITE_MAIL_PASSWORD')
+EMAIL_USE_TLS = True
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage',
+    'useraccount',
 ]
 
 MIDDLEWARE = [
