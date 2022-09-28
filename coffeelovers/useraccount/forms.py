@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.models import User
+from .models import User
 from django.contrib.auth.forms import PasswordChangeForm, UserChangeForm
 from django.contrib.admin.widgets import AdminDateWidget
 class RegisterForm(forms.Form):
