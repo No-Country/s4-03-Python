@@ -31,14 +31,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-
+'''
 SECRET_KEY = config('SITE_SECRET_KEY')
 
 EMAIL_HOST = config('SITE_MAIL_HOST')
 EMAIL_PORT = config('SITE_MAIL_PORT')
 EMAIL_HOST_USER = config('SITE_MAIL')
-EMAIL_HOST_PASSWORD = config('SITE_MAIL_PASSWORD')
-EMAIL_USE_TLS = True
+EMAIL_HOST_PASSWORD = config('SITE_MAIL_PASSWORD') 
+EMAIL_USE_TLS = True '''
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -103,7 +103,7 @@ DATABASES = {
         'PASSWORD': config('DB_PASSWORD'),
         'HOST': config('DB_HOST'),
         'PORT': config('DB_PORT'),
-    }    
+    }
 }
 
 
