@@ -7,5 +7,5 @@ from useraccount import urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('homepage.urls')),
-    path('useraccount/', include('useraccount.urls')),
+    path('useraccount/', include('useraccount.urls'))
 ]

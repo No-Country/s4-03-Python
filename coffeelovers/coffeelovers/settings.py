@@ -33,7 +33,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 '''
 SECRET_KEY = config('SITE_SECRET_KEY')
-
 EMAIL_HOST = config('SITE_MAIL_HOST')
 EMAIL_PORT = config('SITE_MAIL_PORT')
 EMAIL_HOST_USER = config('SITE_MAIL')
