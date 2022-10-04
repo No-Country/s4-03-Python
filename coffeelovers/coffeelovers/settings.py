@@ -11,22 +11,42 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
+from dotenv import load_dotenv
+from django.conf import settings
+import os
+
+
+#load dotenv
+load_dotenv()
+env_path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(dotenv_path=env_path)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+SECRET_KEY = 'django-insecure-0r^d7dbb_uvlx$xnccbzx&4t1ey_@39oob2^s9r3=to@4997i5'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0r^d7dbb_uvlx$xnccbzx&4t1ey_@39oob2^s9r3=to@4997i5'
+'''
+SECRET_KEY = config('SITE_SECRET_KEY')
+EMAIL_HOST = config('SITE_MAIL_HOST')
+EMAIL_PORT = config('SITE_MAIL_PORT')
+EMAIL_HOST_USER = config('SITE_MAIL')
+EMAIL_HOST_PASSWORD = config('SITE_MAIL_PASSWORD') 
+EMAIL_USE_TLS = True '''
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = "useraccount.user" 
 
 # Application definition
 
@@ -38,6 +58,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage',
+    'useraccount',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +97,12 @@ WSGI_APPLICATION = 'coffeelovers.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
 
@@ -116,7 +141,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.0/howto/static-files/
+
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+
+)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
