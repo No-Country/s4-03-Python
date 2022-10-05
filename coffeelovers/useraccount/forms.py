@@ -1,7 +1,8 @@
 from django import forms
-from .models import User
 from django.contrib.auth.forms import PasswordChangeForm, UserChangeForm
 from django.contrib.admin.widgets import AdminDateWidget
+from django.contrib.auth.models import User
+
 class RegisterForm(forms.Form):
     username = forms.CharField(label='Alias', required=True,
                                 min_length=4, max_length=50,
