@@ -1,0 +1,514 @@
+
+:root {
+  --bars-color: #D9A679;
+  --web-page-width: 1236px;
+  --mob820-page-width: 750px;
+  --mob460-page-width: 400px;
+}
+body {
+  background-color:white;
+}
+.image_card {
+  border-radius: 14px;
+  border: none;
+  width: 297px;
+  height: 236px;
+}
+
+.image_card_found {
+  border-radius: 14px;
+  border: 10px solid #D9A679;
+  width: 297px;
+  height: 236px;
+}
+.container {
+  width: var(--web-page-width);
+  margin: 0px auto;
+  background-color: white;
+  display: grid;
+  row-gap: .5rem;
+  column-gap: 1rem;
+  grid-template-rows: 80px
+                      295px
+                      40px 
+                      227px 
+                      90px 
+                      227px 
+                      90px
+                      250px
+                      200px
+                      80px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "nav_menu nav_menu nav_menu nav_menu"
+                       "publicity publicity publicity publicity"                       
+                       "coffee_near coffee_near coffee_near coffee_near"
+                       "card1 card2 card3 card4"
+                       "desc1 desc2 desc3 desc4"
+                       "card5 card6 card7 card8"
+                       "desc5 desc6 desc7 desc8"
+                       "about_app about_app about_app about_app"
+                       "info_app info_app info_app info_app"
+                       "footer footer footer footer";
+
+}
+
+
+/*
+  START NAV_MENU 
+*/
+
+.nav_menu {
+  grid-area: nav_menu;
+}
+
+.nav_menu {
+
+  display: grid;
+  position: fixed;
+  justify-content: left;
+  align-items: center;
+  background-color: var(--bars-color);
+  font-size: 1.3rem;
+  border-radius: 0 0 18px 18px;
+  align-items: center;
+  grid-template-columns: 180px 750px 150px 156px;
+  grid-template-rows: 80px;
+  grid-template-areas: "logo search map_icon auth_icon";
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.logo {
+  display: grid;
+  justify-content: left;
+  margin-left: 5px;
+  height: 50px;
+  align-items: center;
+  padding: .3rem .3rem;
+ 
+}
+.logo_container {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 20px;
+  
+}
+.logo_name {
+  font-size: 1.3rem;
+ }
+ .user_name {
+  font-size: 1rem;
+  color: #FBF6F2;
+ }
+.search {
+  grid-area: search;
+}
+
+.search {
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: .3rem .4rem;
+  font-size: 1.3rem;
+  width: 800px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  
+}
+
+.search_container {
+  display: flex;
+  width: 100%; 
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  gap: 1.7rem;
+
+}
+
+.search_input {
+  padding: .4rem .4rem;
+  font-size: 1.3rem;
+  width: 700px;
+  height: 42px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 30px;
+ /* border-bottom: .1rem solid #12376e; */
+
+}
+
+.search_glass {
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: -37px;
+  z-index: 9;
+  margin-left: 500px;
+}
+
+
+.map_icon {
+    grid-area: map_icon;
+  }
+  
+.map_icon {
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .auth_icon {
+    grid-area: auth_icon;
+  }
+  
+  .auth_icon {
+    display: grid;
+    position: sticky;
+    justify-content: left;
+    align-items: center;
+    
+  }
+
+/*
+  END NAV_MENU 
+*/
+
+.publicity {
+  grid-area: publicity;
+}
+
+.publicity {
+  display: grid;
+}
+.coffee_near {
+  grid-area: coffee_near;
+}
+
+.coffee_near {
+  display: grid;
+  justify-content: left;
+  align-items: center;
+  font-size: 20px;
+  font-style: italics;
+}
+
+.card1 {
+  grid-area: card1;
+}
+
+.card1 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2 {
+  grid-area: card2;
+}
+
+.card2 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.card3 {
+  grid-area: card3;
+}
+
+.card3 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.card4 {
+  grid-area: card4;
+}
+
+.card4 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc1  {
+  grid-area: desc1;
+}
+
+.desc1  {
+  display: grid;
+  justify-content: left;
+  align-items: top;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+ 
+}
+.desc2 {
+  grid-area: desc2;
+}
+
+.desc2  {
+  display: grid;
+  justify-content: left;
+  align-items: top;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+.desc3  {
+  grid-area: desc3;
+}
+
+.desc3  {
+  display: grid;
+  justify-content: left;
+  align-items: top;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+
+.desc4  {
+  grid-area: desc4;
+}
+
+.desc4  {
+  display: grid;
+  justify-content: left;
+  align-items: top;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+
+.card5 {
+  grid-area: card5;
+}
+
+.card5 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.card6 {
+  grid-area: card6;
+}
+
+.card6 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.card7 {
+  grid-area: card7;
+}
+
+.card7 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.card8 {
+  grid-area: card8;
+}
+
+.card8 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc5  {
+  grid-area: desc5;
+}
+
+.desc5  {
+  display: grid;
+  justify-content: left;
+  align-items: top;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+
+}
+
+.desc6 {
+  grid-area: desc6;
+}
+
+.desc6  {
+  display: grid;
+  justify-content: left;
+  align-items: top;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+
+}
+
+.desc7  {
+  grid-area: desc7;
+}
+
+.desc7  {
+  display: grid;
+  justify-content: left;
+  align-items: top;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+
+}
+
+.desc8  {
+  grid-area: desc8;
+}
+
+.desc8  {
+  display: grid;
+  justify-content: left;
+  align-items: top;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+
+}
+.desc_container {
+  display: flex;
+  flex-direction: column;
+   
+}
+.description_cards {
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.footer {
+  display: grid;
+  background-color:var(--bars-color);
+  border-radius: 18px 18px 0 0;
+  justify-content: left;
+  align-items: center;
+
+
+}
+
+.about_as_footer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  
+
+}
+.about_app {
+  grid-area: about_app;
+}
+
+.about_app {
+  display: grid;
+  justify-content: left;
+  align-items: center;
+  
+}
+
+.about_content {
+  display: inline-flex;
+  align-items: center;
+  
+} 
+.about_description {
+  width: 750px;
+  margin-left: 4px;
+  font-size: 1.4rem;
+}
+.about_img {
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+}  
+.waitress_props {
+  height: 280px;
+  width: 250px;
+}
+.info_app {
+  grid-area: info_app;
+}
+
+.info_app {
+  display: grid;
+  justify-content: left;
+  align-items: center;
+  background-color: #FBF6F2;
+  align-items: center;
+  border:1px solid #F2A85D;
+  font-size: 1.4rem;
+}
+
+.info_content {
+  display: inline-flex;
+  flex-direction:column;
+  row-gap: 30px;
+  column-gap: 40px;
+}
+
+.info_title {
+  justify-content: left;
+  margin-left: 4px;
+  
+}
+
+.info_steps {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+.ball_one_img {
+  align-items: center;
+  margin-left: 4px;
+}
+.search_coffee {
+  align-items: center;
+  width: 220px;
+}
+
+.ball_two_img {
+  align-items: center;
+}
+
+.description_cards {
+  display: flex;
+  flex-direction: column;
+ 
+  
+}
+
+.star_and_image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+
+}
+
+.city_and_image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+   
+
+}
+.star_props {
+  width: 26px;
+  height: 26px;
+}
+.city_props {
+  width: 28px;
+  height: 28px;
+} 
