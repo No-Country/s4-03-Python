@@ -40,7 +40,13 @@
 
   </div>
   <div class="card4">
-    <img class="image_card" src="{{ card4.coffee_image }}">
+    <a class="nav-link" href="{% url 'coffee_house:details' card4.id %}">
+      {% if card4_found.card4_selected %}
+        <img class="image_card_found" src="{{ card4.coffee_image }}">
+      {% else %}  
+        <img class="image_card" src="{{ card4.coffee_image }}">
+      {% endif %}  
+    </a>
   </div>
   <div class="desc1">
     <div class="desc_container">
@@ -150,16 +156,40 @@
     
   </div>
   <div class="card5">
-    <img class="image_card" src="{{ card5.coffee_image }}">
+    <a class="nav-link" href="{% url 'coffee_house:details' card5.id %}">
+      {% if card5_found.card5_selected %}
+        <img class="image_card_found" src="{{ card5.coffee_image }}">
+      {% else %}  
+        <img class="image_card" src="{{ card5.coffee_image }}">
+      {% endif %}  
+    </a>
   </div>
   <div class="card6">
-    <img class="image_card" src="{{ card6.coffee_image }}">
+    <a class="nav-link" href="{% url 'coffee_house:details' card6.id %}">
+      {% if card6_found.card6_selected %}
+        <img class="image_card_found" src="{{ card6.coffee_image }}">
+      {% else %}  
+        <img class="image_card" src="{{ card6.coffee_image }}">
+      {% endif %}  
+    </a>
   </div>
   <div class="card7">
-    <img class="image_card" src="{{ card7.coffee_image }}">
+    <a class="nav-link" href="{% url 'coffee_house:details' card7.id %}">
+      {% if card7_found.card7_selected %}
+        <img class="image_card_found" src="{{ card7.coffee_image }}">
+      {% else %}  
+        <img class="image_card" src="{{ card7.coffee_image }}">
+      {% endif %}  
+    </a>
   </div>
   <div class="card8">
-    <img class="image_card" src="{{ card8.coffee_image }}">
+    <a class="nav-link" href="{% url 'coffee_house:details' card8.id %}">
+      {% if card8_found.card8_selected %}
+        <img class="image_card_found" src="{{ card8.coffee_image }}">
+      {% else %}  
+        <img class="image_card" src="{{ card8.coffee_image }}">
+      {% endif %}  
+    </a>
   </div>
   <div class="desc5">
     <div class="desc_container">
