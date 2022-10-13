@@ -1,0 +1,52 @@
+@font-face {
+    font-family: monda;
+    src: url('../fonts/Monda-Regular.ttf');
+  }
+body{
+  font-family: monda;
+}
+.grid-container{
+display: grid;
+grid-template-columns: auto auto;
+}
+#column1{
+width: auto;
+}
+
+#column2{
+  margin-top: 15%;
+  margin-left: 10%;
+  width: 80%;
+}
+.grupo-form{
+  margin-right: 40px;
+  margin-left: -8px ;
+}
+
+.texto-form{
+font-size: 12px;
+margin-top: 12px;
+}
+.titulo-form{
+  font-size: 50px;
+  text-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
+}
+.boton-container{
+display: flex;
+justify-content: center;
+}
+
+.boton-form{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 22px;
+gap: 10px;
+width: 300px;
+height: 50px;
+
+background: rgba(242, 168, 93, 0.5);
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+}

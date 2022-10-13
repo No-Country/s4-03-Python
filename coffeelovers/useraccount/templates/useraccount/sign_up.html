@@ -1,12 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
+<div class="row grid-container"> 
+  <div id="column1">
+    <img src="{% static 'img/Rectangle2.png' %}">
+</div>
 
-<div class="d-flex p-5 justify-content-start w-100 h-100"> 
-    
-  <div class="py-5">
-    <form method="post" class="bg-light row p-3 col-lg-12 border boder-primary rounded shadow-lg mt-3 ms-md-5" style="--bs-bg-opacity: .5;">
-      <h3 class="row p-lg-12 justify-content-center">Registra y encuentra tu cafe ideal</h3>
+
+
+    <div class="container" id="column2">
+	<div class="grupo-form"> 
+	  <h3 class="titulo-form">Registro</h3>
+	        {% csrf_token %}
+	<div class="texto-form"> 
+	  <p>Regístrate en CoffeLovers y accede a importantes beneficios.
+Más de 300 cafeterías de especialidad adheridas a nuestro programa.</p>
+	</div>
+
+	</div>
+
+        <div class="form-group my-4">
       {% csrf_token %}
       {% for field in form %}
         <div class="form-group p-2" >
@@ -17,10 +30,14 @@
           {% endif %}
         </div>
       {% endfor %}
-      <button type="submit" class="btn btn-primary mt-2">Registrarme</button>
-      <a class='row-2 btn btn-danger p-2 mt-2' href={% url 'home' %}>Cancelar</a>
-    </form>
-  </div> 
+  <div class="row mt-5 boton-container">
+        <button type="submit"  class="boton-form">Registrarme</button>
+        </div>
+      </form>
+    </div>
 </div>
+
+
+    
 
 {% endblock %}
