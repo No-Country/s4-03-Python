@@ -27,9 +27,10 @@ def sign_up(request):
 def logout_coffeelover(request):
     if not request.user.is_authenticated:
         return redirect('home')
-    logout(request)
-    messages.success(request,'Salió de sesión exitosamente')
-    return redirect('home')
+    else:  
+      logout(request)
+      messages.success(request,'Salió de sesión exitosamente')
+      return redirect('home')
         
 
 def login_coffeelover(request):

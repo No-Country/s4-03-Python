@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+  <table border="1" width="1200">
+    <tr width="100">
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Wifi</th>
+      <th>BikeFriendly</th>
+    </tr>
+    {% for detail in coffee_details %}
+    <tr>
+      <td>{{ detail.name }}</td>
+      <td>{{ detail.address }}</td>
+      <td>{{ detail.city }}</td>  
+      <td>{{ detail.wifi }}</td>  
+      <td>{{ detail.bike_friendly }}</td>  
+      <td><a class="nav-link" href="{% url 'favorite:favorite' detail.id user.id %}">Agregar a favoritos</a></td>  
+    </tr>
+    {% endfor %}  
+  </table>
+  
+</div>
+{% endblock %}
