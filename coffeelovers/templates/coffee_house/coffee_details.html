@@ -64,11 +64,9 @@
     <img id="coffee-image" src=" {{ detail.coffee_image.url}}">
     <div class="contanier row mt-3">
       <div class="col-6"> 
-	<!-- <h2> Nombre de la cafetería: </h2> -->
     <div class="row my-2">
 	<h1> {{ detail.name }} </h1>
 	</div>
-    <!-- <h2 class="nodb">Café de especialidad</h2> -->
     <div class="row mt-4">
     <div class="col-2"> 
 
@@ -79,11 +77,7 @@
       </div> 
     </div>
       </div>
-      <!-- <div class="col-1"> -->
-      <!-- </div> -->
 	<div class="col-4">
-	  <!-- <h5>Precio medio: </h5> -->
-	  <!--   <h4>{{ detail.price_rate }} pesos</h4> -->
 	  <div class="d-flex flex-row-reverse">
 
 	    <a href="{% url 'favorite:favorite' detail.id user.id %}"> <img src="{% static 'img/Bookmark.png' %}"></a>
@@ -99,16 +93,10 @@
 	    </div>
 	  </div>
       <div class="container row">
-    <!-- <div class="col">  -->
-    <!--   <p class="informative nodb">3 reseñas</p> -->
-    <!--   </div>  -->
     <div class="col-5"> 
       </div> 
       </div>
 
- <!--      <div class="container row"> -->
-	<!-- <p class="abierto informative nodb">Abierto ahora</p> -->
- <!--      </div> -->
 
   </div>
 
@@ -225,43 +213,43 @@
 		    <!-- Tarjetas de valoraciones  -->
     <!--========================================================== -->
  
-<div class="row nodb p-2 bt-3">
+<div class="row nodb p-2 bt-3 mt-5">
   <div class="col-11" id="decoration-line" >
- <!--  <div class="container mb-5 w-75 d-flex justify-content-evenly"> -->
- <!--  <div class="card border rating-card" > -->
-	<!--  <div class="card-body"> -->
-	<!-- <div class="row">  -->
-	<!-- 	<div class="col-5">  -->
-	<!-- 	  <img class="image-card" src="{% static  'img/Rectangle 8.png' %}"> -->
-	<!-- 	</div> -->
-	<!---->
-	<!--      <div class="col-7">  -->
-	<!-- 	<p class="card-title rate-card-title">Paula</p> -->
-	<!--       <div class="row card-block rating">  -->
-	<!-- 	<img src="{% static  'img/5-stars.png' %}"> -->
-	<!-- 		</div> -->
-	<!--       </div> -->
-	<!-- </div> -->
-	<!-- <p class="card-text">Es un lugar para ir a trabajar o estudiar.</p> -->
-	<!-- </div> -->
- <!--   </div> -->
- <!--  <div class="card border rating-card"> -->
-	<!--  <div class="card-body"> -->
-	<!-- <div class="row">  -->
-	<!-- 	<div class="col-5">  -->
-	<!-- 	  <img class="image-card" src=" {% static 'img/Rectangle 8.png' %}"> -->
-	<!-- 	</div> -->
-	<!---->
-	<!--      <div class="col-7">  -->
-	<!-- 	<p class="card-title rate-card-title">Paula</p> -->
-	<!--       <div class="row card-block rating">  -->
-	<!-- 	<img src=" {% static  'img/5-stars.png' %}"> -->
-	<!-- 	</div> -->
-	<!--       </div> -->
-	<!-- </div> -->
-	<!-- <p class="card-text">Es un lugar para ir a trabajar o estudiar.</p> -->
-	<!-- </div> -->
- <!--   </div> -->
+  <div class="container mb-5 w-75 d-flex justify-content-evenly">
+  <div class="card border rating-card" >
+	 <div class="card-body">
+	<div class="row"> 
+		<div class="col-5"> 
+		  <img class="image-card" src="{% static  'img/Rectangle 8.png' %}">
+		</div>
+
+	     <div class="col-7"> 
+		<p class="card-title rate-card-title">Paula</p>
+	      <div class="row card-block rating"> 
+		<img src="{% static  'img/5-stars.png' %}">
+			</div>
+	      </div>
+	</div>
+	<p class="card-text">Es un lugar para ir a trabajar o estudiar.</p>
+	</div>
+   </div>
+  <div class="card border rating-card">
+	 <div class="card-body">
+	<div class="row"> 
+		<div class="col-5"> 
+		  <img class="image-card" src=" {% static 'img/Rectangle 8.png' %}">
+		</div>
+
+	     <div class="col-7"> 
+		<p class="card-title rate-card-title">Paula</p>
+	      <div class="row card-block rating"> 
+		<img src=" {% static  'img/5-stars.png' %}">
+		</div>
+	      </div>
+	</div>
+	<p class="card-text">Es un lugar para ir a trabajar o estudiar.</p>
+	</div>
+   </div>
 	<!---->
 	<!---->
  <!--  <div class="card border rating-card"> -->
@@ -298,16 +286,12 @@
     </div>
    
     <div class="row">
-	<!-- <div class="row mb-3"> -->
-	<!--   <h2>Ubicación</h2> -->
-	<!-- </div> -->
 	<p><b>Ciudad: </b>{{ detail.city }} </p>
 	<p><b>Dirección: </b>{{ detail.address }}</p>
 	<p><b>Horario: </b>{{ detail.schedule }} </p>
     </div>
     <div class="row">
     <div class="col" >
-      <!-- <img src=" {% static 'img/Mapa.png' %}"> -->
       <div id ="map"> </div> 
     </div>
 
@@ -320,51 +304,9 @@
 
 <div>
 
-
-  <!-- <div class=""> -->
-  <!--   <table border="2" cellpadding="9" cellspacing="0" bordercolor="#000000" > -->
-  <!--   <tr > -->
-  <!--     <th style="background-color: lightgreen;">Name</th> -->
-  <!--     <th style="background-color: lightgreen;" >Address</th> -->
-  <!--     <th  style="background-color: lightgreen;">City</th> -->
-  <!--      -->
-  <!--     <th class="nodb">Wifi</th> -->
-  <!--     <th class="nodb">open_area</th> -->
-  <!--     <th class="nodb">silence_area</th> -->
-  <!--     <th class="nodb">vegan</th> -->
-  <!--     <th>celiac</th> -->
-  <!--     <th>bike_friendly</th> -->
-  <!--     <th class="nodb">price_rate</th> -->
-  <!--     <th style="background-color: orange;">toasters</th> -->
-  <!--     <th class="nodb">origen</th> -->
-  <!--     <th class="nodb">machine</th> -->
-  <!--     <th class="nodb">stars_average</th> -->
-  <!--     <th>created_at</th> -->
-  <!--     <th>updated_at</th> -->
-  <!--     <th class="nodb">coffee_image</th> -->
-  <!--   </tr> -->
-  <!--   <tr> -->
-  <!--     <td>{{ detail.name }}</td> -->
-  <!--     <td>{{ detail.address }}</td> -->
-  <!--     <td>{{ detail.city }}</td>   -->
-  <!--     <td>{{ detail.wifi }}</td>   -->
-  <!--     <td>{{ detail.open_area }}</td>   -->
-  <!--     <td>{{ detail.silence_area }}</td>   -->
-  <!--     <td>{{ detail.vegan }}</td>   -->
-  <!--     <td>{{ detail.celiac }}</td>   -->
-  <!--     <td>{{ detail.bike_friendly }}</td>   -->
-  <!--     <td>{{ detail.price_rate }}</td>   -->
-  <!--     <td>{{ detail.toasters }}</td>   -->
-  <!--     <td>{{ detail.origen }}</td>   -->
-  <!--     <td>{{ detail.machine }}</td>   -->
-  <!--     <td>{{ detail.stars_average }}</td>   -->
-  <!--     <td>{{ detail.created_at }}</td>   -->
-  <!--     <td>{{ detail.updated_at }}</td>   -->
-  <!--     <td>{{ detail.coffee_image }}</td>   -->
-  <!--     <td><a class="nav-link" href="{% url 'favorite:favorite' detail.id user.id %}">Agregar a favoritos</a></td>   -->
 <script>
 function initMap() {
-  var macc =  { {{ detail.coordinates }} };
+  var macc =  { lat: {{ detail.latitude }}, lng: {{ detail.longitude}}  };
       var map = new google.maps.Map(
            document.getElementById('map'), {zoom: 15, center: macc});
       var marker = new google.maps.Marker({position: macc, map: map});
