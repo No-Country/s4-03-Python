@@ -25,6 +25,17 @@ h5{
 p{
  font-size: 14px; 
 }
+
+#coffee-image{
+width: 400px;
+height: auto;
+}
+
+.no-hay{
+  width: 50px;
+  height: auto;
+}
+
 .informative{
  font-size: 16px; 
 }
@@ -32,11 +43,12 @@ p{
  margin-top:20px;
  margin-left:20px;
 }
-
+.user_name {
+  color: #FBF6F2;
+ }
 .abierto{
  color: #12AD0E;
 }
-
 
 
 /* Tarjetas de comentarios */
@@ -44,10 +56,10 @@ p{
   border-radius: 10px;
   height: 80px; 
   display: flex;
-  margin-top: 2%;
+  margin-top: 4%;
   margin-bottom: 2%;
-  margin-left: 4%;
-  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #D9A679;
 }
 .rating-card{
