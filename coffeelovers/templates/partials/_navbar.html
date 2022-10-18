@@ -1,25 +1,24 @@
 
 {% load static %}
-
 <div class="nav_menu">
   <div class="logo">
     <div class="logo_container">
       <div class="logo_name">
       <a class="navbar-brand " href="http://localhost:8000"> <img src="{% static 'img/CoffeeLovers.png' %}">
       </div>
-      <div class="user_name">
         {% if user.is_authenticated %}
+      <div class="user_name">
           <p class="user_name_text">{{ user.username }}</p>
-        {% endif %}
       </div>
+        {% endif %}
     </div>
   </div>  
- 
+
   <div class="search">
-    <form class="search_container" method="GET" action="{% url 'home' %}"> 
+    <form class=class="search_container" method="GET" action="{% url 'home' %}"> 
       <input class="search_input" type="text" name="q" placeholder="Search Coffeehouses..."/>
       <div class="search_glass"><a href="http://localhost:8000"><img src="{% static 'img/Search.png' %}"></a> </div>
-  </div>
+  </div> 
   <div class="map_icon">
     <img src="{% static 'img/Address.png' %}"/>
   </div>
