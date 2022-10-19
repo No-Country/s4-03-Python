@@ -10,8 +10,8 @@ class Favorite(models.Model):
       (SI,'Si'),
       (NO,'No'),
     ]
-    house = models.ManyToManyField(CoffeeHouse)
-    name = models.ManyToManyField(User)
+    house = models.ForeignKey(CoffeeHouse, on_delete=models.CASCADE, to_field='id')
+    name = models.ForeignKey(User, on_delete=models.CASCADE)
     is_active = models.BooleanField(choices=YES_OR_NOT_CHOICES, default=SI)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)

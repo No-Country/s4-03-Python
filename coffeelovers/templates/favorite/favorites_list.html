@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="result">
+   
+      {% for coffee in coffees %}
+      {{ coffee.house.name_id }}
+        {{ coffee.name.username }} 
+
+        {{ coffee.house.name }} | {{ coffee.house.address }} <br/>
+        {{ coffee.house.stars_average }} <br/><br/>
+        
+      {% endfor %}
+   
+</div>
+<a class="nav-link" href="{% url 'home'  %}">Volver a Home</a>
+<a class="nav-link" href="{% url 'coffee_house:details' detail_id %}">Atrás</a>
+{% endblock %}

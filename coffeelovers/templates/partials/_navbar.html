@@ -16,9 +16,13 @@
 
   <div class="search">
     <form class="search_container" method="GET" action="{% url 'home' %}"> 
-      <input class="search_input" type="text" name="q" placeholder="Search Coffeehouses..."/>
-      <div class="search_glass"><a href="http://localhost:8000"><img src="{% static 'img/Search.png' %}"></a> </div>
+      <div>
+      <input class="search_input" type="text" name="q" placeholder="Search Coffeehouses..." autofocus />
+      </div>
     </form>  
+    <div class="search_glass">
+      <a href="http://localhost:8000"><img src="{% static 'img/Search.png' %}"></a>
+    </div>
   </div> 
   <div class="map_icon">
     <img src="{% static 'img/Address.png' %}"/>

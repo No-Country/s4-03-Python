@@ -18,15 +18,11 @@ def home(request):
                   Q(city__icontains=q) |
                   Q(address__icontains=q)
                   ).values('name','coffee_image','stars_average','city','id').order_by('-stars_average')[:8])
-    if request.user.is_authenticated:
-        print("USUARIO {}".format(request.user.username))
-          
       
     if not(len(coffees)):
         messages.error(request,'No se encontró cafetería con esos criterios')
         
     coffee_images_list = stars_ranked()
-    print("Long de coffees:{}".format(len(coffees)))
     if len(coffees) > 0 and len(coffees) !=8:
         card1 = coffees[0]
         card1_found= {'card1_selected': True }
