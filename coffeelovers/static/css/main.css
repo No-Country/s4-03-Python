@@ -13,10 +13,14 @@ body {
   width: 297px;
   height: 236px;
 }
-
+.image_card:hover {
+ border: 5px  #D9A679;
+ opacity: 80%;
+ 
+}
 .image_card_found {
   border-radius: 14px;
-  border: 10px solid #D9A679;
+  border: 2px solid hsl(127, 80%, 77%);
   width: 297px;
   height: 236px;
 }
@@ -34,8 +38,8 @@ body {
                       90px 
                       227px 
                       90px
-                      250px
-                      200px
+                      350px
+                      350px
                       80px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "nav_menu nav_menu nav_menu nav_menu"
@@ -55,6 +59,7 @@ body {
 /*
   START NAV_MENU 
 */
+
 .nav_menu {
   grid-area: nav_menu;
 }
@@ -63,18 +68,14 @@ body {
 
   display: grid;
   position: fixed;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 16px 0px;
   justify-content: left;
   align-items: center;
   background-color: var(--bars-color);
   font-size: 1.3rem;
   border-radius: 0 0 18px 18px;
   align-items: center;
-  /* nuevo */
-  width: var(--web-page-width);
   grid-template-columns: 180px 750px 150px 156px;
-  /* nuevo */
-  grid-template-rows: 70px;
+  grid-template-rows: 80px;
   grid-template-areas: "logo search map_icon auth_icon";
 }
 
@@ -101,10 +102,8 @@ body {
   font-size: 1.3rem;
  }
  .user_name {
-  background-color:#FBF6F2;
-  padding: 3px;
-  border-radius: 10px;
-  margin-top: 0.4rem;
+  font-size: 1rem;
+  color: #FBF6F2;
  }
 
  .user_name_text {
@@ -185,7 +184,14 @@ body {
     align-items: center;
     
   }
+  .auth_area {
+    display: inline-flex;
+    align-items: center;
 
+  }
+  .login_icon {
+
+  }
 /*
   END NAV_MENU 
 */
@@ -460,6 +466,7 @@ body {
   align-items: center;
   border:1px solid #F2A85D;
   font-size: 1.4rem;
+  height: 80%;
 }
 
 .info_content {
@@ -467,6 +474,7 @@ body {
   flex-direction:column;
   row-gap: 30px;
   column-gap: 40px;
+  
 }
 
 .info_title {
