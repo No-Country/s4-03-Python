@@ -4,10 +4,11 @@
   <div class="logo">
     <div class="logo_container">
       <div class="logo_name">
+	<img class="coffeecup" src="{% static 'img/logo.png' %}">
       <a class="navbar-brand " href="http://localhost:8000"> <img src="{% static 'img/CoffeeLovers.png' %}">
       </div>
         {% if user.is_authenticated %}
-      <div class="user_name">
+      <div class="user_name col">
           <p class="user_name_text">{{ user.username }}</p>
       </div>
         {% endif %}
@@ -17,15 +18,15 @@
   <div class="search">
     <form class=class="search_container" method="GET" action="{% url 'home' %}"> 
       <input class="search_input" type="text" name="q" placeholder="Search Coffeehouses..."/>
-      <div class="search_glass"><a href="http://localhost:8000"><img src="{% static 'img/Search.png' %}"></a> </div>
-  </div> 
+      <div class="search_glass"><a href="http://localhost:8000"><img src="{% static 'img/search.png' %}"></a> </div>
+  </div>
   <div class="map_icon">
-    <img src="{% static 'img/Address.png' %}"/>
+    <img src="{% static 'img/address.png' %}"/>
   </div>
  
   <div class="auth_icon">
     <a class="nav-link" href="{% url 'useraccount:sign_up' %}">
-      <img src="{% static 'img/Account.png' %}"/>
+      <img src="{% static 'img/account.png' %}"/>
     </a>   
   </div>
 </div>
