@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/forms.css' %}"/>
 </head>
 <body>
+ {% include "useraccount/messages.html" %}
 <nav class="navbar navbar-expand-lg bg-primary col col-md-11 mx-auto ms-auto me-auto rounded-bottom shadow" style="background-color: #D9A679 !important;">
   <div class="container-fluid  ">
     <div class="ms-auto me-auto">  
@@ -65,6 +66,7 @@
 
 	<p class="card-text">{{ coffee.house.address }}</p>
     <a href="{% url 'coffee_house:details' coffee.house.id %}" class="boton-fav">Acceder</a>
+    <a href="{% url 'favorite:delete_favorite' coffee.house.id %}" class="boton-fav">Borrar</a>
   </div>
 </div>
 
@@ -81,9 +83,11 @@
   <div class="row mt-5 boton-container">
         <a class='boton-form' href={% url 'home' %}>Volver al inicio</a>
         </div>
+    {% if via_detail is True %}    
 	  <div class="row mt-3 boton-container">
         <a class='boton-form return' href={% url 'coffee_house:details' detail_id %}>Atras</a>
-        </div>
+    </div>
+    {% endif %}
 </div>
 
   </body>
