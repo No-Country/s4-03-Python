@@ -3,7 +3,8 @@
 <div class="result">
    
       {% for coffee in coffees %}
-      {{ coffee.house.name_id }}
+         
+      <a class="nav-link" href="{% url 'coffee_house:details' coffee.house.id %}">Ver cafetería</a>
         {{ coffee.name.username }} 
 
         {{ coffee.house.name }} | {{ coffee.house.address }} <br/>
@@ -13,5 +14,5 @@
    
 </div>
 <a class="nav-link" href="{% url 'home'  %}">Volver a Home</a>
-<a class="nav-link" href="{% url 'coffee_house:details' detail_id %}">Atrás</a>
+
 {% endblock %}

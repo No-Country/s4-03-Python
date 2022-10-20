@@ -12,16 +12,12 @@ def list(request, id):
     if not request.user.is_authenticated:
         messages.error(request,'Accion prohibida: No está autenticado')
         return redirect('home')
-    id = request.detail_id
-    print("THE DETAILS: {}".format(id))
-    pk = request.user.id
+    print("USER ID: %s" % id )  
     name= User.objects.get(username=request.user.username) 
     result_set = Favorite.objects.filter(name_id=name)
-        
-    context ={'coffees': result_set, 'detail_id':id}
-    print("Result:{}".format(result_set))
+    context ={'coffees': result_set, 'detail_id': 9999 }
     return render(request, 'favorite/favorites_list.html',context)
-
+  
 def add_favorites(request, id):
     if not request.user.is_authenticated:
         messages.error(request,'Accion prohibida: No está autenticado')

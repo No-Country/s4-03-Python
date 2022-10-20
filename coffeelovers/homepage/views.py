@@ -3,7 +3,6 @@ from coffee_house.models import CoffeeHouse
 from app_config.models import TitleMessage
 from django.contrib import  messages
 from django.db.models import Q
-from random import seed
 from random import randint
 
 

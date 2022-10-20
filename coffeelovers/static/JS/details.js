@@ -4,3 +4,8 @@ function initMap() {
            document.getElementById('map'), {zoom: 15, center: macc});
       var marker = new google.maps.Marker({position: macc, map: map});
     }
+
+
+function myFunction() {
+      document.getElementById("myText").autofocus = true;  
+}
