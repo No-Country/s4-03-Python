@@ -105,10 +105,15 @@ body {
 }
 .logo_name {
   font-size: 1.3rem;
+  display: flex;
+  flex-direction: row;
  }
+
  .user_name {
-  font-size: 1rem;
-  color: #FBF6F2;
+  background-color:#FBF6F2;
+  padding: 3px;
+  border-radius: 10px;
+  margin-top: 0.4rem;
  }
 
  .user_name_text {
@@ -149,7 +154,7 @@ body {
 .search_input {
   padding: .4rem .4rem;
   font-size: 1.3rem;
-  width: 700px;
+  width: 600px;
   height: 42px;
   border: none;
   border-radius: 5px;
@@ -180,25 +185,43 @@ body {
     align-items: center;
   }
   
-  .auth_icon {
-    grid-area: auth_icon;
-  }
-  
-  .auth_icon {
-    display: grid;
-    position: sticky;
-    justify-content: left;
-    align-items: center;
-    
-  }
-  .auth_area {
-    display: inline-flex;
-    align-items: center;
+.icons{
+  display:flex;
+  margin-top: 2px;
+}  
+.auth_icon {
+  margin-right: 10px;
+  margin-top: -4px;
+}
+.bookmark-icon{
+  width: 50px;
+  margin-right: 15px;
+  height: auto;
+}
+.out-icon{
+  width: 35px;
+  height: auto;
+  margin-top: 8px;
+}
+.log-icon{
+  width: 35px;
+  height: auto;
+  margin-top: 8px;
+  margin-left: -15px;
+}
+.signup-icon{
+  margin-top: 8px;
+  margin-left: -50px;
+  height: 35px;
+}
+.coffeecup{
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+  margin-top: -4px;
+}
 
-  }
-  .login_icon {
 
-  }
 /*
   END NAV_MENU 
 */

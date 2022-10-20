@@ -1,18 +1,89 @@
-{% extends 'base.html' %}
-{% block content %}
-<div class="result">
-   
-      {% for coffee in coffees %}
-         
-      <a class="nav-link" href="{% url 'coffee_house:details' coffee.house.id %}">Ver cafetería</a>
-        {{ coffee.name.username }} 
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/forms.css' %}"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-primary col col-md-11 mx-auto ms-auto me-auto rounded-bottom shadow" style="background-color: #D9A679 !important;">
+  <div class="container-fluid  ">
+    <div class="ms-auto me-auto">  
+	<img class="coffeecup" src="{% static 'img/logo.png' %}">
+      <a class="navbar-brand " href="http://localhost:8000"> <img src="{% static 'img/CoffeeLovers.png' %}">
+      </a>
+</div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <div class="ms-auto me-auto col-8">
 
-        {{ coffee.house.name }} | {{ coffee.house.address }} <br/>
-        {{ coffee.house.stars_average }} <br/><br/>
+      <div class="user_name mt-2 ">
+        {% if user.is_authenticated %}
+	<h3>¡Hola, {{ user.username }}!</h3>
+        {% endif %}
+      </div>
+  </div>  
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+  <div class="container m-5 p-4">
+    <div class="row my-4">
+      <h3><b>Tus lugares favoritos:</b></h3>
+</div>
+      {% for coffee in coffees %}
+    <div class="d-flex row">
+<div class="card border shadow m-4" style="width: 18rem;">
+    <img class="image_card_found" src="{{ coffee.coffee_image }}">
+
+  <div class="card-body">
+    <h3 class="card-title">{{ coffee.house.name }}</h3>
+    <div class="row">
+    <div class="col"> 
+      <h5>  {{ coffee.stars_average }}</h5>
+      </div>
+    <div class="col"> 
+      <img src="{% static 'img/Star.png' %}">
+      </div>
+    </div> 
+      </div> 
+
+
+	<p class="card-text">{{ coffee.house.address }}</p>
+    <a href="#" class="boton-fav">Acceder</a>
+  </div>
+</div>
+
+
+
         
       {% endfor %}
    
 </div>
-<a class="nav-link" href="{% url 'home'  %}">Volver a Home</a>
+</div>
 
-{% endblock %}
+
+<div class="container m-5">
+  <div class="row mt-5 boton-container">
+        <a class='boton-form' href={% url 'home' %}>Volver al inicio</a>
+        </div>
+	  <div class="row mt-3 boton-container">
+        <a class='boton-form return' href={% url 'coffee_house:details' detail_id %}>Atras</a>
+        </div>
+</div>
+
+  </body>

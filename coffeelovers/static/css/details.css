@@ -26,11 +26,37 @@ p{
  font-size: 14px; 
 }
 
+.coffeecup{
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+  margin-top: -4px;
+}
 #coffee-image{
 width: 400px;
 height: auto;
 }
 
+.bookmark-icon{
+  width: 50px;
+  margin-right: 10px;
+  height: auto;
+}
+.auth-icon{
+  width: 35px;
+  margin-right: 10px;
+  margin-top: 7px;
+  height: auto;
+}
+.sign-icon{
+  margin-left: -50px;
+  height: 35px;
+} 
+.out-icon{
+  width: 35px;
+  height: auto;
+  margin-right: 10px;
+}
 .no-hay{
   width: 50px;
   height: auto;
