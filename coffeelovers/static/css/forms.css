@@ -8,8 +8,13 @@ width: auto;
 }
 
 #column2{
-  margin-top: 15%;
+  margin-top: 5%;
   margin-left: 10%;
+  width: 80%;
+}
+#column2-login{
+  margin-top: 5%;
+  margin-left: 0%;
   width: 80%;
 }
 .grupo-form{
@@ -17,10 +22,16 @@ width: auto;
   margin-left: -8px ;
 }
 
-.texto-form{
-font-size: 12px;
+.texto-form-container{
 margin-top: 12px;
 }
+
+.texto-form{
+font-size: 14px;
+}
+
+
+
 .titulo-form{
   font-size: 50px;
   text-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
@@ -60,11 +71,19 @@ border-radius: 12px;
 }
 
 .acceder{
-
 width: 150px;
 height: 30px;
 margin-bottom: 20px;
 }
+
+.borrar{
+width: 150px;
+margin-bottom: 10px;
+height: 30px;
+background: #9A031E;
+color: white;
+}
+
 
 .return{
 background: rgba(242, 168, 93, 0.1);

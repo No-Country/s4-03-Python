@@ -30,9 +30,10 @@
  
   <div class="icons">
         {% if user.is_authenticated %}
-    <a class="nav-link auth_icon" href="http://localhost:8000">
+          <a class="nav-link" href="{% url 'favorite:list' user.id %}">
+
     <img class="bookmark-icon" src="{% static 'img/Bookmark-icon.png' %}"/>
-  </a>
+	  </a>
         <a class="nav-link auth_icon " href="{% url 'useraccount:logout' %}">
           <img class="out-icon" src="{% static 'img/logout.png' %}"/>
         </a>

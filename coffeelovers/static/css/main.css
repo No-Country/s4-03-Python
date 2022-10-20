@@ -12,10 +12,12 @@ body {
   border: none;
   width: 297px;
   height: 236px;
+  z-index: -11;
 }
 .image_card:hover {
  border: 5px  #D9A679;
  opacity: 80%;
+  z-index: -11;
  
 }
 .image_card_found {
@@ -23,6 +25,7 @@ body {
   border: 4px solid hsl(31, 95%, 48%);
   width: 297px;
   height: 236px;
+  z-index: -11;
 }
 .container {
   width: var(--web-page-width);
@@ -78,6 +81,7 @@ body {
   grid-template-columns: 180px 750px 150px 156px;
   grid-template-rows: 80px;
   grid-template-areas: "logo search map_icon auth_icon";
+  z-index: 8;
 }
 
 .logo {
@@ -196,7 +200,7 @@ body {
 .out-icon{
   width: 35px;
   height: auto;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 .log-icon{
   width: 35px;
@@ -473,6 +477,9 @@ body {
   width: 750px;
   margin-left: 4px;
   font-size: 1.4rem;
+}
+.about_description_text{
+  font-size: 18px;
 }
 .about_img {
   width: 300px;
