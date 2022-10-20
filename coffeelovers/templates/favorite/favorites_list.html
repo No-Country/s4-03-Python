@@ -64,7 +64,7 @@
 
 
 	<p class="card-text">{{ coffee.house.address }}</p>
-    <a href="#" class="boton-fav">Acceder</a>
+    <a href="{% url 'coffee_house:details' coffee.house.id %}" class="boton-fav">Acceder</a>
   </div>
 </div>
 

@@ -78,7 +78,7 @@ body {
   font-size: 1.3rem;
   border-radius: 0 0 18px 18px;
   align-items: center;
-  grid-template-columns: 180px 750px 150px 156px;
+  grid-template-columns: 180px 750px 130px 176px;
   grid-template-rows: 80px;
   grid-template-areas: "logo search map_icon auth_icon";
   z-index: 8;
@@ -180,7 +180,6 @@ body {
   
 .map_icon {
     display: grid;
-    position: relative;
     justify-content: center;
     align-items: center;
   }
@@ -188,10 +187,19 @@ body {
 .icons{
   display:flex;
   margin-top: 2px;
-}  
+} 
+
 .auth_icon {
+  grid-area: auth_icon;
+}
+.auth_icon {
+  display:grid;
   margin-right: 10px;
   margin-top: -4px;
+}
+.auth_container {
+  display: inline-flex;
+  flex-direction: row;
 }
 .bookmark-icon{
   width: 50px;

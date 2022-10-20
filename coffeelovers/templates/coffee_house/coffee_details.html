@@ -44,7 +44,7 @@
 	<ul class="navbar-nav ms-auto mb-2 mb-lg-0 mt-4 mt-md-0">
         {% if user.is_authenticated %}
         <li class="nav-item ms-auto me-auto">
-	  <a class="nav-link" aria-current="page" href="http://localhost:8000"> <img class="bookmark-icon" src="{% static 'img/Bookmark-icon.png' %}"></a>
+	  <a class="nav-link" aria-current="page" href="{% url 'favorite:list' user.id %}"> <img class="bookmark-icon" src="{% static 'img/Bookmark-icon.png' %}"></a>
         </li>
         <li class="nav-item ms-auto me-auto">
 	  <a class="nav-link" href="{% url 'useraccount:logout' %}"><img class="auth-icon" src="{% static 'img/logout.png' %}">   </a>
