@@ -5,12 +5,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>CoffeeLovers - Tus favoritos</title>
+  <link rel="icon" type="image/x-icon" href="{% static '/img/favicon.ico' %}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/forms.css' %}"/>
 </head>
 <body>
+
+
+    <!--========================================================== -->
+			      <!-- Navbar  -->
+    <!--========================================================== -->
+
 <nav class="navbar navbar-expand-lg bg-primary col col-md-11 mx-auto ms-auto me-auto rounded-bottom shadow" style="background-color: #D9A679 !important;">
   <div class="container-fluid  ">
     <div class="ms-auto me-auto">  
@@ -27,7 +34,7 @@
 
       <div class="user_name mt-2 ">
         {% if user.is_authenticated %}
-	<h3>¡Hola, {{ user.username }}!</h3>
+	<h3 class="text-capitalize">¡Hola, {{ user.username }}!</h3>
         {% endif %}
       </div>
   </div>  
@@ -38,43 +45,45 @@
 
 
 
+    <!--========================================================== -->
+			      <!-- Favorites  -->
+    <!--========================================================== -->
 
 
-
-  <div class="container m-5 p-4">
-    <div class="row my-4">
-      <h3><b>Tus lugares favoritos:</b></h3>
-</div>
-      {% for coffee in coffees %}
-    <div class="d-flex row">
-<div class="card border shadow m-4" style="width: 18rem;">
-    <img class="image_card_found" src="{{ coffee.coffee_image }}">
-
-  <div class="card-body">
-    <h3 class="card-title">{{ coffee.house.name }}</h3>
-    <div class="row">
-    <div class="col"> 
-      <h5>  {{ coffee.stars_average }}</h5>
-      </div>
-    <div class="col"> 
-      <img src="{% static 'img/Star.png' %}">
-      </div>
-    </div> 
-      </div> 
-
-
-	<p class="card-text">{{ coffee.house.address }}</p>
-    <a href="#" class="boton-fav">Acceder</a>
+<div class="container p-4">
+  <div class="row my-3">
+    <h3><b>Tus lugares favoritos:</b></h3>
   </div>
-</div>
+      {% for coffee in coffees %}
+  <div class="row d-flex">
+    <div class="card p-2 border shadow m-2" style="width: 25rem; height: auto;">
+      
 
-
-
-        
+	<div class="card-body">
+	    <img class="img" style="width: 200px; height: auto;" src="{{ coffee.house.coffee_image.url }}">
+	    <h3 class="card-title mt-3">{{ coffee.house.name }}</h3>
+	  <div class="row my-3">
+	      <div class="col-2"> 
+		  <h5 style="margin-top:0.3rem;margin-left: 0.5rem;">  {{ coffee.house.stars_average }}</h5>
+	      </div>
+	      <div class="col"> 
+		  <img style="width: 30px; height: auto; margin-left: -10px;" src="{% static 'img/Star.png' %}">
+	      </div>
+	  </div> 
+      <div class="row " style="margin-top:-10px">
+	      <p class="card-text">Dirección: {{ coffee.house.address }}</p>
+	</div>
+      <div class="row mt-3">
+	<a href="{% url 'coffee_house:details' detail_id %}" class="boton-fav acceder">Acceder</a>
+	</div>
+  </div>
+  </div>
       {% endfor %}
+  </div>
    
 </div>
-</div>
+
+
 
 
 <div class="container m-5">

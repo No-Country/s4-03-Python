@@ -4,11 +4,13 @@
   <div class="logo">
     <div class="logo_container">
       <div class="logo_name">
+      <a class="navbar-brand " href="http://localhost:8000">
 	<img class="coffeecup" src="{% static 'img/logo.png' %}">
-      <a class="navbar-brand " href="http://localhost:8000"> <img src="{% static 'img/CoffeeLovers.png' %}">
+	 <img src="{% static 'img/CoffeeLovers.png' %}">
+	 </a>
       </div>
         {% if user.is_authenticated %}
-      <div class="user_name">
+      <div class="user_name text-capitalize">
           <p class="user_name_text">{{ user.username }}</p>
       </div>
         {% endif %}
@@ -22,7 +24,7 @@
       </div>
     </form>  
     <div class="search_glass">
-      <a href="http://localhost:8000"><img src="{% static 'img/Search.png' %}"></a>
+      <a href="http://localhost:8000"><img style="margin-top: -7px;" src="{% static 'img/Search.png' %}"></a>
     </div>
   </div> 
  

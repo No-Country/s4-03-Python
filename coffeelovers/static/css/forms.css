@@ -59,6 +59,13 @@ box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 12px;
 }
 
+.acceder{
+
+width: 150px;
+height: 30px;
+margin-bottom: 20px;
+}
+
 .return{
 background: rgba(242, 168, 93, 0.1);
 }
