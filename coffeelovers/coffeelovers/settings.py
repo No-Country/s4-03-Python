@@ -12,19 +12,18 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 from decouple import config
-from dotenv import load_dotenv
+import environ
 from django.conf import settings
 import os
 
 
-#load dotenv
-load_dotenv()
-env_path = os.path.join(os.path.dirname(__file__), '.env')
-load_dotenv(dotenv_path=env_path)
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+env = environ.Env()
+environ.Env.read_env()
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 
 # SECRET_KEY = 'django-insecure-0r^d7dbb_uvlx$xnccbzx&4t1ey_@39oob2^s9r3=to@4997i5'
@@ -33,7 +32,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = config('SITE_SECRET_KEY')
+#SECRET_KEY = config('SITE_SECRET_KEY')
+SECRET_KEY = str(os.environ.get('SECRET_KEY'))
+
 '''
 EMAIL_HOST = config('SITE_MAIL_HOST')
 EMAIL_PORT = config('SITE_MAIL_PORT')
@@ -43,9 +44,9 @@ EMAIL_USE_TLS = True
 '''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DEBUG', default=False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 
@@ -102,11 +103,11 @@ WSGI_APPLICATION = 'coffeelovers.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
+        'NAME': str(os.environ.get('DB_NAME')),
+        'USER': str(os.environ.get('DB_USER')),
+        'PASSWORD': str(os.environ.get('DB_PASSWORD')),
+        'HOST':str(os.environ.get('DB_HOST')),
+        'PORT':os.environ.get('DB_PORT'), 
     }
 }
 
