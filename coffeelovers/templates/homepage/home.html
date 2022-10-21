@@ -1,0 +1,355 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+  {% include 'partials/_navbar.html' %}
+  {% include "useraccount/messages.html" %}
+  <div class="publicity">
+    <img src="{% static 'img/publicity.png' %}">
+  </div>
+  <div class="coffee_near">
+    <p class="coffee_near_text">{{ coffee_title.title }}</p>
+  </div>
+
+  <div class="card1">
+    <a class="nav-link" href="{% url 'coffee_house:details' card1.id %}">
+      {% if card1_found.card1_selected %}
+        <img class="image_card_found" src="{{ card1.coffee_image }}">
+      {% else %}  
+        <img class="image_card" src="{{ card1.coffee_image }}">
+      {% endif %}  
+    </a>
+  </div>
+  <div class="card2">
+    <a class="nav-link" href="{% url 'coffee_house:details' card2.id %}">
+      {% if card2_found.card2_selected %}
+        <img class="image_card_found" src="{{ card2.coffee_image }}">
+      {% else %}  
+        <img class="image_card" src="{{ card2.coffee_image }}">
+      {% endif %}  
+    </a>
+  </div>
+  <div class="card3"> 
+    <a class="nav-link" href="{% url 'coffee_house:details' card3.id %}">
+      {% if card3_found.card3_selected %}
+        <img class="image_card_found" src="{{ card3.coffee_image }}">
+      {% else %}  
+        <img class="image_card" src="{{ card3.coffee_image }}">
+      {% endif %}  
+    </a>
+
+  </div>
+  <div class="card4">
+    <a class="nav-link" href="{% url 'coffee_house:details' card4.id %}">
+      {% if card4_found.card4_selected %}
+        <img class="image_card_found" src="{{ card4.coffee_image }}">
+      {% else %}  
+        <img class="image_card" src="{{ card4.coffee_image }}">
+      {% endif %}  
+    </a>
+  </div>
+  <div class="desc1">
+    <div class="desc_container">
+      <div class="description_cards">
+        {{ card1.name }}
+      </div>
+      <div class="star_and_image">
+        <div>
+          <a class="nav-link" href=""><img class="star_props" src="{% static 'img/Star.png' %}"></a>
+        </div>
+        <div>
+          {{ card1.stars_average }}
+        </div>     
+      </div>
+      <div>
+        <div class="city_and_image">
+          <div>
+            <a class="nav-link" href=""><img class="city_props" src="{% static 'img/Address.png' %}"></a>
+          </div>
+          <div>
+            Ciudad de {{ card1.city }}
+          </div>
+        </div>
+        
+      </div>
+    </div>
+      
+  </div>
+  <div class="desc2">
+    <div class="desc_container">
+      <div class="description_cards">
+        {{ card2.name }}
+      </div>
+      <div class="star_and_image">
+        <div>
+          <a class="nav-link" href=""><img class="star_props" src="{% static 'img/Star.png' %}"></a>
+        </div>
+        <div>
+          {{ card2.stars_average }}
+        </div>     
+      </div>
+      <div>
+        <div class="city_and_image">
+          <div>
+            <a class="nav-link" href=""><img class="city_props" src="{% static 'img/Address.png' %}"></a>
+          </div>
+          <div>
+            Ciudad de {{ card2.city }}
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>  
+  <div class="desc3">
+    <div class="desc_container">
+      <div class="description_cards">
+        {{ card3.name }}
+      </div>
+      <div class="star_and_image">
+        <div>
+          <a class="nav-link" href=""><img class="star_props" src="{% static 'img/Star.png' %}"></a>
+        </div>
+        <div>
+          {{ card3.stars_average }}
+        </div>     
+      </div>
+      <div>
+        <div class="city_and_image">
+          <div>
+            <a class="nav-link" href=""><img class="city_props" src="{% static 'img/Address.png' %}"></a>
+          </div>
+          <div>
+            Ciudad de {{ card3.city }}
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div class="desc4">
+    <div class="desc_container">
+      <div class="description_cards">
+        {{ card4.name }}
+      </div>
+      <div class="star_and_image">
+        <div>
+          <a class="nav-link" href=""><img class="star_props" src="{% static 'img/Star.png' %}"></a>
+        </div>
+        <div>
+          {{ card4.stars_average }}
+        </div>     
+      </div>
+      <div>
+        <div class="city_and_image">
+          <div>
+            <a class="nav-link" href=""><img class="city_props" src="{% static 'img/Address.png' %}"></a>
+          </div>
+          <div>
+            Ciudad de {{ card4.city }}
+          </div>
+        </div>      
+      </div>
+    </div>
+    
+  </div>
+  <div class="card5">
+    <a class="nav-link" href="{% url 'coffee_house:details' card5.id %}">
+      {% if card5_found.card5_selected %}
+        <img class="image_card_found" src="{{ card5.coffee_image }}">
+      {% else %}  
+        <img class="image_card" src="{{ card5.coffee_image }}">
+      {% endif %}  
+    </a>
+  </div>
+  <div class="card6">
+    <a class="nav-link" href="{% url 'coffee_house:details' card6.id %}">
+      {% if card6_found.card6_selected %}
+        <img class="image_card_found" src="{{ card6.coffee_image }}">
+      {% else %}  
+        <img class="image_card" src="{{ card6.coffee_image }}">
+      {% endif %}  
+    </a>
+  </div>
+  <div class="card7">
+    <a class="nav-link" href="{% url 'coffee_house:details' card7.id %}">
+      {% if card7_found.card7_selected %}
+        <img class="image_card_found" src="{{ card7.coffee_image }}">
+      {% else %}  
+        <img class="image_card" src="{{ card7.coffee_image }}">
+      {% endif %}  
+    </a>
+  </div>
+  <div class="card8">
+    <a class="nav-link" href="{% url 'coffee_house:details' card8.id %}">
+      {% if card8_found.card8_selected %}
+        <img class="image_card_found" src="{{ card8.coffee_image }}">
+      {% else %}  
+        <img class="image_card" src="{{ card8.coffee_image }}">
+      {% endif %}  
+    </a>
+  </div>
+  <div class="desc5">
+    <div class="desc_container">
+      <div class="description_cards">
+        {{ card5.name }}
+      </div>
+      <div class="star_and_image">
+        <div>
+          <a class="nav-link" href=""><img class="star_props" src="{% static 'img/Star.png' %}"></a>
+        </div>
+        <div>
+          {{ card5.stars_average }}
+        </div>     
+      </div>
+      <div>
+        <div class="city_and_image">
+          <div>
+            <a class="nav-link" href=""><img class="city_props" src="{% static 'img/Address.png' %}"></a>
+          </div>
+          <div>
+            Ciudad de {{ card5.city }}
+          </div>
+        </div>      
+      </div>
+    </div>
+    
+  </div>
+  <div class="desc6">
+    <div class="desc_container">
+      <div class="description_cards">
+        {{ card6.name }}
+      </div>
+      <div class="star_and_image">
+        <div>
+          <a class="nav-link" href=""><img class="star_props" src="{% static 'img/Star.png' %}"></a>
+        </div>
+        <div>
+          {{ card6.stars_average }}
+        </div>     
+      </div>
+      <div>
+        <div class="city_and_image">
+          <div>
+            <a class="nav-link" href=""><img class="city_props" src="{% static 'img/Address.png' %}"></a>
+          </div>
+          <div>
+            Ciudad de {{ card6.city }}
+          </div>
+        </div>      
+      </div>
+    </div>
+      </div>
+  <div class="desc7">
+    <div class="desc_container">
+      <div class="description_cards">
+        {{ card7.name }}
+      </div>
+      <div class="star_and_image">
+        <div>
+          <a class="nav-link" href=""><img class="star_props" src="{% static 'img/Star.png' %}"></a>
+        </div>
+        <div>
+          {{ card7.stars_average }}
+        </div>     
+      </div>
+      <div>
+        <div class="city_and_image">
+          <div>
+            <a class="nav-link" href=""><img class="city_props" src="{% static 'img/Address.png' %}"></a>
+          </div>
+          <div>
+            Ciudad de {{ card7.city }}
+          </div>
+        </div>      
+      </div>
+    </div>
+    
+  </div>
+  <div class="desc8">
+    <div class="desc_container">
+      <div class="description_cards">
+        {{ card8.name }}
+      </div>
+      <div class="star_and_image">
+        <div>
+          <a class="nav-link" href=""><img class="star_props" src="{% static 'img/Star.png' %}"></a>
+        </div>
+        <div>
+          {{ card8.stars_average }}
+        </div>     
+      </div>
+      <div>
+        <div class="city_and_image">
+          <div>
+            <a class="nav-link" href=""><img class="city_props" src="{% static 'img/Address.png' %}"></a>
+          </div>
+          <div>
+            Ciudad de {{ card8.city }}
+          </div>
+        </div>      
+      </div>
+    </div>
+    
+  </div>
+
+<!--
+      Begins about_app information
+-->
+
+  <div class="about_app">
+    <div class="about_content">
+        <div class="about_description">
+          <p class="about_description_text">
+          Te contamos que somos un grupo de personas que les gusta
+          el buen café y queremos que todos tengamos un lugar para 
+          reunirnos. ¡Así que ya eres de la familia! Busca tu cafetería
+          de especilidad preferida, consulta las reseñas y disfruta
+          de un gran café.
+        </p>
+        </div>
+        <div class="about_img">
+          <img class="waitress_props" src="{% static 'img/Waitress.png' %}">
+        </div>
+    </div>
+  </div> 
+<!--
+      Ends about_app information
+-->
+
+<!--
+    Begin Information area 
+-->
+
+  <div class="info_app">
+    <div class="info_content">
+      <div class="info_title">
+        Con CoffeeLovers puedes:
+      </div>
+      <div class="info_steps">
+        <div class="ball_one_img">
+          <img class="ball_one_props" src="{% static 'img/ball_one.png' %}">
+        </div>
+        <div class="search_coffee">
+         Buscar cafeterías cerca
+        </div>
+        <div class="ball_two_img">
+          <img class="ball_two_props" src="{% static 'img/ball_two.png' %}">
+        </div>
+        <div class="reviews_query">Consultar reseñas y características</div>
+        <div class="ball_three_img">
+          <img class="ball_three_props" src="{% static 'img/ball_three.png' %}">
+        </div>
+        <div class="create_profile">Crear un perfil y guardar tus cafeterías favoritas</div>
+      </div>     
+    </div>
+  </div>  
+  <!--
+      End Information area 
+    -->
+  {% include 'partials/_footer.html' %}
+</div>  
+{% endblock %}
+

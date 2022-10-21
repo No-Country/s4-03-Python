@@ -1,0 +1,130 @@
+@font-face {
+    font-family: monda;
+    src: url(../fonts/Monda-Regular.ttf);
+  }
+body{
+  font-family: monda;
+}
+
+h2{
+  font-size: 24px;
+ font-weight: bold; 
+}
+h2{
+  font-size: 20px;
+ font-weight: bold; 
+}
+h4{
+  font-size: 16px;
+ font-weight: bold; 
+}
+h5{
+ font-size: 12px; 
+ font-weight: bold; 
+}
+p{
+ font-size: 14px; 
+}
+
+.coffeecup{
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+  margin-top: -4px;
+}
+#coffee-image{
+width: 400px;
+height: auto;
+}
+
+.bookmark-icon{
+  width: 50px;
+  margin-right: 10px;
+  height: auto;
+}
+.auth-icon{
+  width: 35px;
+  margin-right: 10px;
+  margin-top: 7px;
+  height: auto;
+}
+.sign-icon{
+  margin-left: -50px;
+  height: 35px;
+} 
+.out-icon{
+  width: 35px;
+  height: auto;
+  margin-right: 10px;
+}
+.no-hay{
+  width: 50px;
+  height: auto;
+}
+
+.informative{
+ font-size: 16px; 
+}
+.feature{
+ margin-top:20px;
+ margin-left:20px;
+}
+.user_name {
+  color: #FBF6F2;
+ }
+.abierto{
+ color: #12AD0E;
+}
+
+
+/* Tarjetas de comentarios */
+#decoration-line{
+  border-radius: 10px;
+  height: 80px; 
+  display: flex;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #D9A679;
+}
+.rating-card{
+margin-top: -40px;
+width: 14rem;
+height: 7rem;
+border-width: 5px;
+box-shadow: 3px -2px 6px 1px rgba(0,0,0,0.41);
+}
+
+.star{
+  width: 35px;
+  height: auto;
+}
+.rating{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: row;
+}
+.image-card{
+ width: 55px;
+ height: auto;
+}
+.rate-card-title{
+    font-size: 14px;
+}
+
+#plus-space{
+  display: flex;
+  align-items: center;
+  height: 180px;
+}
+
+/* Not in database */
+.nodb{
+  background-color: white;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;}

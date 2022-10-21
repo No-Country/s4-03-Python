@@ -1,0 +1,105 @@
+
+.grid-container{
+display: grid;
+grid-template-columns: auto auto;
+}
+#column1{
+width: auto;
+}
+
+#column2{
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 80%;
+}
+#column2-login{
+  margin-top: 5%;
+  margin-left: 0%;
+  width: 80%;
+}
+.grupo-form{
+  margin-right: 40px;
+  margin-left: -8px ;
+}
+
+.texto-form-container{
+margin-top: 12px;
+}
+
+.texto-form{
+font-size: 14px;
+}
+
+
+
+.titulo-form{
+  font-size: 50px;
+  text-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
+}
+.boton-container{
+display: flex;
+justify-content: center;
+}
+
+.boton-form{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 22px;
+width: 300px;
+height: 50px;
+
+background: rgba(242, 168, 93, 0.5);
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+}
+
+
+.boton-fav{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+width: 200px;
+height: 50px;
+background: rgba(242, 168, 93, 0.5);
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+}
+
+.acceder{
+width: 150px;
+height: 30px;
+margin-bottom: 20px;
+}
+
+.borrar{
+width: 150px;
+margin-bottom: 10px;
+height: 30px;
+background: #9A031E;
+color: white;
+}
+
+
+.return{
+background: rgba(242, 168, 93, 0.1);
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+    color:#000;
+    text-decoration:none;
+}
+
+.coffeecup{
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+  margin-top: -4px;
+}
