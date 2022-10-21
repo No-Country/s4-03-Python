@@ -1,1 +1,1 @@
-web: gunicorn tsurypub.wsgi
+web: gunicorn coffelovers.wsgi
