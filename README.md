@@ -52,7 +52,7 @@ Como CoffeLover deseo calificar con un pulgar arriba o abajo otros comentarios d
 #### Diseño:
 
 <p align="left">
-<img src="https://es.wikipedia.org/wiki/Figma#/media/Archivo:Figma-logo.svg"  width=10% height=10%>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"  width=10% height=10%>
 </p>
 
 
