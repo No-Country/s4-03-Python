@@ -61,3 +61,4 @@ Como CoffeLover deseo calificar con un pulgar arriba o abajo otros comentarios d
 - René Eustaquio Silva Carrillo (Full-stack) 
 - Antonella Díez (Diseñadora UX/UI))
 - Daniel Penedo (Full-stack)
+- Nora Saucedo (Team Leader)
